@@ -8,23 +8,32 @@ import Foundation
 import PerfectLogger
 import PerfectRequestLogger
 
-PostgresConnector.database = "MbaoDB"
-PostgresConnector.username = "Supervisor"
-PostgresConnector.host = "127.0.0.1"
-PostgresConnector.port = 32773
-PostgresConnector.password = "1DFSQ894843NKF9F8SND9D"
+if let  db = ProcessInfo.processInfo.environment["DATABASE_DB"],
+  let username = ProcessInfo.processInfo.environment["DATABASE_USERNAME"],
+  let host = ProcessInfo.processInfo.environment["DATABASE_HOST"],
+  let port =  ProcessInfo.processInfo.environment["DATABASE_PORT"],
+  let password = ProcessInfo.processInfo.environment["DATABASE_PASSWORD"] {
+      PostgresConnector.database = db
+      PostgresConnector.username = username
+      PostgresConnector.host = host
+      PostgresConnector.port = Int(port) ?? 32768
+      PostgresConnector.password = password
+} else {
+       throw APIError.databaseConnectionFailed
+}
 
 do {
-    
+
     let connection = PGConnection()
-    
+
+    let stringConnection = "host=\(PostgresConnector.host) port=\(PostgresConnector.port) dbname=\(PostgresConnector.database) user=\(PostgresConnector.username) password=\(PostgresConnector.password)"
+
+    if connection.connectdb(stringConnection) == .bad {
+        throw APIError.databaseConnectionFailed
+    }
+
     defer {
         connection.close()
-    }
-    
-    connection.connectdb("host=\(PostgresConnector.host) dbname=\(PostgresConnector.database) port=\(PostgresConnector.port) password= \(PostgresConnector.password) username=\(PostgresConnector.username)")
-    if connection.status() == .bad {
-        throw APIError.databaseConnectionFailed
     }
 
     try Store().setup()
@@ -57,6 +66,3 @@ do {
 } catch PerfectError.networkError(let err,let msg) {
     LogFile.critical("Network error thrown: \(err) \(msg)")
 }
-
-
-
