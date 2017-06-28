@@ -65,7 +65,7 @@ extension Dictionary {
     /** 
         this helper provide a way to merge to dictionary in one.
      */
-    func merge(other:Dictionary<Key,Value>, conflictIdentifier: String = "products") throws -> Dictionary<Key, Value> {
+    func merge(other:Dictionary<Key,Value>, conflictIdentifier: String = "product") throws -> Dictionary<Key, Value> {
         var map = Dictionary<Key,Value>()
         
         for (k,v) in self {
