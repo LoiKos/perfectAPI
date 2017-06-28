@@ -9,7 +9,7 @@ import PerfectLogger
 import PerfectRequestLogger
 
 if let  db = ProcessInfo.processInfo.environment["DATABASE_DB"],
-  let username = ProcessInfo.processInfo.environment["DATABASE_USERNAME"],
+  let username = ProcessInfo.processInfo.environment["DATABASE_USER"],
   let host = ProcessInfo.processInfo.environment["DATABASE_HOST"],
   let port =  ProcessInfo.processInfo.environment["DATABASE_PORT"],
   let password = ProcessInfo.processInfo.environment["DATABASE_PASSWORD"] {
