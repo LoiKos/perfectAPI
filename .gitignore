@@ -3,7 +3,8 @@
 # gitignore
 #
 
-
+*.log
+StORMlog.txt
 .build
 Package.pins
 Package.swift.orig
