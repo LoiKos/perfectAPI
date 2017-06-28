@@ -112,6 +112,7 @@ Request body Structure :
    "creationdate":Date //  Auto generated do not modify
 } 
 ```
+
 Code 
 
 #### Code: 200 OK
@@ -159,8 +160,117 @@ Content:
    "creationdate":Date //  Auto generated do not modify
 } 
 ```
+
 ### <a name="Stock"></a> Stock
 
+URL        :  ` api/v1/stores/:storeId/products ` |  ` api/v1/stores/:storeId/products/:productId `
+
+Method     :  ` GET `,` POST `  |  ` DELETE ` , ` PATCH ` ` GET `
+
+URL Params :      storeId: required          |   storeId:   required, productId: required
+
+Parameters :  ` Limit ` and ` Offet ` with GET  | None
+
+
+Request body Structure : 
+```Swift
+// Stock obj
+{
+   "product_refproduct": String //  Auto generated do not modify
+   "product_name": String,      //  required
+   "product_picture":String,    //  optional
+   "product_creationdate":Date, //  Auto generated do not modify
+   "refproduct":String,
+   "refstore":String,
+   "quantity":Int,
+   "vat":Double,
+   "priceht":Double,
+   "status":String,
+   "creationdate":Date,
+   "lastupdate":Date
+} 
+```
+
+Code 
+
+#### Code: 200 OK
+
+Content: 
+
+```Swift
+// Stock obj
+{
+   "product_refproduct": String //  Auto generated do not modify
+   "product_name": String,      //  required
+   "product_picture":String,    //  optional
+   "product_creationdate":Date, //  Auto generated do not modify
+   "refproduct":String,
+   "refstore":String,
+   "quantity":Int,
+   "vat":Double,
+   "priceht":Double,
+   "status":String,
+   "creationdate":Date,
+   "lastupdate":Date
+} 
+```
+OR
+
+```Swift
+[
+   // Product obj
+// Stock obj
+{
+   "product_refproduct": String //  Auto generated do not modify
+   "product_name": String,      //  required
+   "product_picture":String,    //  optional
+   "product_creationdate":Date, //  Auto generated do not modify
+   "refproduct":String,
+   "refstore":String,
+   "quantity":Int,
+   "vat":Double,
+   "priceht":Double,
+   "status":String,
+   "creationdate":Date,
+   "lastupdate":Date
+} ,{
+   "product_refproduct": String //  Auto generated do not modify
+   "product_name": String,      //  required
+   "product_picture":String,    //  optional
+   "product_creationdate":Date, //  Auto generated do not modify
+   "refproduct":String,
+   "refstore":String,
+   "quantity":Int,
+   "vat":Double,
+   "priceht":Double,
+   "status":String,
+   "creationdate":Date,
+   "lastupdate":Date
+}
+   ,...
+] 
+```
+
+#### Code: 201 CREATED
+
+Content: 
+```Swift
+// Stock obj
+{
+   "product_refproduct": String //  Auto generated do not modify
+   "product_name": String,      //  required
+   "product_picture":String,    //  optional
+   "product_creationdate":Date, //  Auto generated do not modify
+   "refproduct":String,
+   "refstore":String,
+   "quantity":Int,
+   "vat":Double,
+   "priceht":Double,
+   "status":String,
+   "creationdate":Date,
+   "lastupdate":Date
+}
+```
 
 ### <a name="Error"></a> API Error
 
