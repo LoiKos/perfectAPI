@@ -8,7 +8,7 @@ This API is build to work with a PostgreSQL database and provide a way to intera
 
 <i class="fa fa-book" aria-hidden="true"></i>
 
-## [Doc](#Doc)  |  [Code Coverage](#Cov)  |  [Docker](#Docker) |  [Task Flow](#Tasks) 
+## [Doc :book:](#Doc)  |  [Code Coverage :shield:](#Cov)  |  [Docker :whale:](#Docker) |  [Task Flow :tools:](#Tasks) 
 
 # <a name="Doc"></a> Api Documentation
 
@@ -25,7 +25,7 @@ URL Params :      none          |   id: required
 Parameters :  ` Limit ` and ` Offet ` with GET  | None
 
 Request body Structure : 
-```Swift
+```swift
 // Store obj
 {
    "refStore": String   //  Auto generated do not modify
@@ -43,7 +43,7 @@ Code
 
 Content: 
 
-```Swift
+```swift
 // Store obj
 {
    "refStore": String   //  Auto generated do not modify
@@ -56,7 +56,7 @@ Content:
 ```
 OR
 
-```Swift
+```swift
 [
    {
       "refStore": String   //  Auto generated do not modify
@@ -80,7 +80,7 @@ OR
 #### Code: 201 CREATED
 
 Content: 
-```Swift
+```swift
 // Store obj
 {
    "refStore": String   //  Auto generated do not modify
@@ -103,7 +103,7 @@ URL Params :      none          |   id: required
 Parameters :  ` Limit ` and ` Offet ` with GET  | None
 
 Request body Structure : 
-```Swift
+```swift
 // Product obj
 {
    "refproduct": String //  Auto generated do not modify
@@ -119,7 +119,7 @@ Code
 
 Content: 
 
-```Swift
+```swift
 // Product obj
 {
    "refproduct": String //  Auto generated do not modify
@@ -130,7 +130,7 @@ Content:
 ```
 OR
 
-```Swift
+```swift
 [
    // Product obj
 {
@@ -151,7 +151,7 @@ OR
 #### Code: 201 CREATED
 
 Content: 
-```Swift
+```swift
 // Product obj
 {
    "refproduct": String //  Auto generated do not modify
@@ -173,7 +173,7 @@ Parameters :  ` Limit ` and ` Offet ` with GET  | None
 
 
 Request body Structure : 
-```Swift
+```swift
 // Stock obj
 {
    "product_refproduct": String //  Auto generated do not modify
@@ -197,7 +197,7 @@ Code
 
 Content: 
 
-```Swift
+```swift
 // Stock obj
 {
    "product_refproduct": String //  Auto generated do not modify
@@ -216,7 +216,7 @@ Content:
 ```
 OR
 
-```Swift
+```swift
 [
    // Product obj
 // Stock obj
@@ -254,7 +254,7 @@ OR
 #### Code: 201 CREATED
 
 Content: 
-```Swift
+```swift
 // Stock obj
 {
    "product_refproduct": String //  Auto generated do not modify
