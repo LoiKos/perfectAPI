@@ -22,7 +22,7 @@ class ProductAPI {
         }
         let product = try Product(dict:dict)
         try product.create()
-        return product.refproduct
+        return try product.toJSON()
     }
     
     /**

@@ -24,7 +24,7 @@ class StoreAPI {
         
         let store = try Store(dict:dict)
         try store.create()
-        return store.refstore
+        return try store.toJSON()
     }
     
     /**
