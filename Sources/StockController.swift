@@ -23,7 +23,7 @@ final class StockController {
             Route(method: .get,    uri: "\(baseUri)/products",                 handler: getProductsInStock),
             Route(method: .get,    uri: "\(baseUri)/products/{productid}",     handler: getProductInStockById),
             Route(method: .delete, uri: "\(baseUri)/products/{productid}",     handler: deleteProductInStockById),
-            Route(method: .put,    uri: "\(baseUri)/products/{productid}",     handler: updateProductInStockById)
+            Route(method: .custom("PATCH"),    uri: "\(baseUri)/products/{productid}",     handler: updateProductInStockById)
         ]
     }
     

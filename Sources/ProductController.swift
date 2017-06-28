@@ -22,7 +22,7 @@ final class ProductController {
             Route(method: .get,     uri: "/products/{id}",  handler: getProductById),
             Route(method: .get,     uri: "/products",       handler: findAll),
             Route(method: .delete,  uri: "/products/{id}",  handler: deleteProductById),
-            Route(method: .put,     uri: "/products/{id}",  handler: updateProductById)
+            Route(method: .custom("PATCH"), uri: "/products/{id}",  handler: updateProductById)
         ]
     }
     

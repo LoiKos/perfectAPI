@@ -22,7 +22,7 @@ final class StoreController {
             Route(method: .get,    uri: "/stores",          handler: findAllStore),
             Route(method: .get,    uri: "/stores/{id}",     handler: findStoreById),
             Route(method: .delete, uri: "/stores/{id}",     handler: deleteStoreById),
-            Route(method: .put,    uri: "/stores/{id}",     handler: updateStoreById)
+            Route(method: .custom("PATCH"),    uri: "/stores/{id}",     handler: updateStoreById)
         ]
     }
     
