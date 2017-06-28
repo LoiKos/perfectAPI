@@ -1,4 +1,7 @@
 import Foundation
+#if os(Linux)
+    import Glibc
+#endif
 
 /**
  
@@ -10,7 +13,13 @@ import Foundation
 class Reference {
     
     // Singleton
-    static let sharedInstance = Reference()
+    static let sharedInstance : Reference = {
+        let instance = Reference()
+        #if os(Linux)
+            srand(UInt32(time(nil)))
+        #endif
+        return instance
+    }()
     
     // Variables
     private let charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".characters.map { String($0) }
@@ -35,7 +44,6 @@ class Reference {
         
         for _ in 0...14 {
             #if os(Linux)
-                srandom(UInt32(time(nil)))
                 reference.append(charSet[Int(UInt32(random() % charSet.count))])
             #else
                 reference.append(charSet[Int(arc4random_uniform(UInt32(charSet.count)))])
@@ -58,7 +66,6 @@ class Reference {
         
         for _ in 0...size - 1 {
             #if os(Linux)
-                srandom(UInt32(time(nil)))
                 reference.append(charSet[Int(UInt32(random() % charSet.count))])
             #else
                 reference.append(charSet[Int(arc4random_uniform(UInt32(charSet.count)))])
