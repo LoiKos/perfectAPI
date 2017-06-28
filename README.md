@@ -1,19 +1,18 @@
-## [Overview](#Overview)  |  [Doc](#Doc)  |  [Code Coverage](#Cov)  |  [Docker](#Docker) |  [Task Flow](#Tasks) 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-   [Stores](#Stores)
-
-   [Products](#Products)
-  
-   [Stock](#Stock)
-   
 # <a name="Overview"></a> Overview
 
 This API as been design to be used to tests the Swift Perfect framework performances. 
+
 This API is build to work with a PostgreSQL database and provide a way to interact with stores and products through an relational model.
+
+<i class="fa fa-book" aria-hidden="true"></i>
+
+## [Doc](#Doc)  |  [Code Coverage](#Cov)  |  [Docker](#Docker) |  [Task Flow](#Tasks) 
 
 # <a name="Doc"></a> Api Documentation
 
-
+ [Stores](#Stores) | [Products](#Products) | [Stock](#Stock) | [Errors](#Error)
 
 ## <a name="Stores"></a> Stores
 
@@ -93,11 +92,76 @@ Content:
 } 
 ```
 
-
-
-
 ### <a name="Products"></a> Products
+
+URL        :  ` api/v1/products ` |  ` api/v1/products/:id `
+
+Method     :  ` GET `,` POST `  |  ` DELETE ` , ` PATCH ` ` GET `
+
+URL Params :      none          |   id: required
+
+Parameters :  ` Limit ` and ` Offet ` with GET  | None
+
+Request body Structure : 
+```Swift
+// Product obj
+{
+   "refproduct": String //  Auto generated do not modify
+   "name": String,      //  required
+   "picture":String,    //  optional
+   "creationdate":Date //  Auto generated do not modify
+} 
+```
+Code 
+
+#### Code: 200 OK
+
+Content: 
+
+```Swift
+// Product obj
+{
+   "refproduct": String //  Auto generated do not modify
+   "name": String,      //  required
+   "picture":String,    //  optional
+   "creationdate":Date //  Auto generated do not modify
+} 
+```
+OR
+
+```Swift
+[
+   // Product obj
+{
+   "refproduct": String //  Auto generated do not modify
+   "name": String,      //  required
+   "picture":String,    //  optional
+   "creationdate":Date //  Auto generated do not modify
+},{
+   "refproduct": String //  Auto generated do not modify
+   "name": String,      //  required
+   "picture":String,    //  optional
+   "creationdate":Date //  Auto generated do not modify
+} 
+   ,...
+] 
+```
+
+#### Code: 201 CREATED
+
+Content: 
+```Swift
+// Product obj
+{
+   "refproduct": String //  Auto generated do not modify
+   "name": String,      //  required
+   "picture":String,    //  optional
+   "creationdate":Date //  Auto generated do not modify
+} 
+```
 ### <a name="Stock"></a> Stock
+
+
 ### <a name="Error"></a> API Error
 
 #### Code: 400 BAD REQUEST 
@@ -119,20 +183,22 @@ Example : Id not found in database
 
 # <a name="Docker"></a> Work with Docker
 
-First download required images :
+#### Required images :
 
 ```shell 
-docker pull postgres
+$ docker pull postgres
 ```
 ```shell 
-docker pull swift
+$ docker pull swift
 ```
 
-Launch database image : 
+#### Launch database container : 
+``` shell
+$ docker run --name *containerName* -e POSTGRES_PASSWORD=*pwd* -e POSTGRES_USER=*userName* -e POSTGRES_DB=*dbName* -d postgres
+```
+#### Build image : 
 
-Build image : 
-
-first go in the Docker file and update these lines :
+   First go in the Docker file and update these lines :
 
 ```Dockerfile
 ENV DATABASE_HOST=*host*  #provide your host name ( you can retrieve via docker inspect )
@@ -141,15 +207,16 @@ ENV DATABASE_DB=*db name*
 ENV DATABASE_USER=*user name*
 ENV DATABASE_PASSWORD=*database password*
 ```
+   Then lauch this command inside the project folder. If you want to set it  :
+
 ```shell 
-docker build -t *name* . 
+$ docker build -t *name* . 
 ```
 
-Launch your image link to database : 
+#### Launch perfect container : 
 
 ```shell
-
-
+$ docker run -it --rm --link *databaseContainerName*:database -p 8080:8080 -v `pwd`:`pwd` -w `pwd` *perfectImageName*
 ```
 
 # <a name="Cov"></a> Code Coverage
