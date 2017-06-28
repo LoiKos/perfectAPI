@@ -81,6 +81,7 @@ class ProductAPI {
                         throw APIError.invalidBody
                 }
             }
+            try obj.save()
             return try obj.toJSON()
         } else {
             throw APIError.notFound

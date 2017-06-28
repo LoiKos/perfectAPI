@@ -35,16 +35,41 @@ class StoreAPI {
             let dict = try json.jsonDecode() as? [String: Any] else {
             throw APIError.parsingError
         }
-        var tuples = [(String,Any)]()
-        for (key,value) in dict {
-            tuples.append((key,value))
-        }
+        
         let store = Store()
         try store.get(id)
         guard store.refstore == id else {
             throw APIError.notFound
         }
-        try store.update(data: tuples, idName: "refstore", idValue: id)
+        
+       
+        for (key,value) in dict {
+            switch key {
+                case "name":
+                    store.name = String(describing: value)
+                case "picture":
+                    store.picture = String(describing: value)
+                case "vat":
+                    if let value = value as? Int,
+                        value > 0 && value < 100 {
+                        store.vat = value
+                    } else if let value = value as? Double,
+                        value > 0 && value < 100 {
+                        let temp_value = value * 100
+                        store.vat = Int(temp_value.rounded())
+                    } else {
+                        throw APIError.invalidVat
+                    }
+                case "currency":
+                    store.currency = String(describing: value)
+                case "merchantkey":
+                    store.merchantkey = String(describing: value)
+                default:
+                    throw APIError.unexpectedData
+            }
+        }
+        
+        try store.save()
         return try store.toJSON()
     }
 

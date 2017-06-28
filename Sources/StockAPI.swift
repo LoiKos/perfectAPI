@@ -83,6 +83,7 @@ class StockAPI {
 
         var array = [[String:Any]]()
         for row in stock.rows() {
+            try product.get(row.refproduct)
             let dict = try row.asDictionary().merge(other: product.asDictionary())
             array.append(dict)
         }
@@ -104,9 +105,15 @@ class StockAPI {
 
         let product = Product()
         let stock = Stock()
-
+        
         try stock.select(whereclause: "refstore = $1 and refproduct = $2", params: [storeid, productid], orderby: [])
         try product.get(productid)
+        
+        guard product.refproduct == productid,
+              stock.refstore == storeid,
+            stock.refproduct == productid else {
+                throw APIError.notFound
+        }
 
         return try stock.asDictionary().merge(other: product.asDictionary()).jsonEncodedString()
     }
@@ -125,11 +132,18 @@ class StockAPI {
 
         let stock = Stock()
         let product = Product()
-
+        
+        try product.get(productid)
         try stock.select(whereclause: "refstore = $1 and refproduct = $2", params: [storeid,productid], orderby: [])
-        try stock.delete()
-        try product.delete(productid)
-
+        
+        guard product.refproduct == productid,
+              stock.refstore == storeid,
+            stock.refproduct == productid else {
+                throw APIError.notFound
+        }
+        
+        try stock.sqlRows("delete from \(stock.table()) where refstore = $1 and refproduct = $2", params: [storeid,productid])
+        try product.delete()
         return try stock.asDictionary().merge(other: product.asDictionary()).jsonEncodedString()
     }
 
@@ -148,10 +162,26 @@ class StockAPI {
         guard try StoreAPI.exist(id: storeid) else {
             throw APIError.notFound
         }
-
-        guard let json = try json?.jsonDecode() as? [String:Any] else{
+        
+        guard let json = json else {
             throw APIError.missingRequireAttribut
         }
+        
+        let jsonbody : [String:Any]
+        
+        do {
+            guard let data = try json.jsonDecode() as? [String:Any] else {
+                throw APIError.parsingError
+            }
+            jsonbody = data
+        } catch {
+            throw APIError.invalidBody
+        }
+        
+        guard !jsonbody.isEmpty else {
+            throw APIError.missingRequireAttribut
+        }
+        
         let product = Product(),
             stock = Stock()
         var productT = [(String,Any)]()
@@ -160,7 +190,7 @@ class StockAPI {
 
         var requestupdated = false
 
-        for (key,value) in json {
+        for (key,value) in jsonbody {
             switch (key,value) {
 
             case let ("product_name", value) where value is String:
@@ -181,7 +211,7 @@ class StockAPI {
                     requestupdated = true
                 }
             case let ("status",value) where value is String:
-                updateRequest += " \(key) = \(value)"
+                updateRequest += " \(key) = '\(value)'"
                 requestupdated = true
             case let ("priceht",value):
                 if let value = value as? Double{
@@ -214,7 +244,9 @@ class StockAPI {
 
         updateRequest += " lastupdate = '\(Date())' where refstore = $1 and refproduct = $2"
         try stock.sqlRows(updateRequest, params: [storeid,productid])
-        try product.update(data: productT, idName: "refproduct", idValue: productid)
+        if !productT.isEmpty {
+            try product.update(data: productT, idName: "refproduct", idValue: productid)
+        }
         var dict = try self.join(table1: stock, table2: product, commonRef: "refproduct", whereclause: "where stock.refstore = $1 and  stock.refproduct = $2", params: [storeid,productid])
 
         if let quantity = dict["quantity"] as? Int {
@@ -262,9 +294,9 @@ class StockAPI {
 
         for (key,value) in json {
             switch key {
-                case "name":
+                case "product_name":
                     product["name"] = value
-                case "picture":
+                case "product_picture":
                     product["picture"] = value
                 case "quantity":
                     stock["quantity"] = value
@@ -275,7 +307,7 @@ class StockAPI {
                 case "vat":
                     stock["vat"] = value
                 default :
-                    throw APIError.unexpectedData
+                    throw APIError.invalidBody
             }
         }
         guard product["name"] != nil,
