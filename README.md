@@ -8,7 +8,7 @@ This API is build to work with a PostgreSQL database and provide a way to intera
 
 <i class="fa fa-book" aria-hidden="true"></i>
 
-## [Doc :book:](#Doc)  |  [Code Coverage :shield:](#Cov)  |  [Docker :whale:](#Docker) |  [Task Flow :tools:](#Tasks) 
+## [Doc :book:](#Doc)  |  [Docker :whale:](#Docker)  |   [Code Coverage :shield:](#Cov) |  [Task Flow :tools:](#Tasks) 
 
 # <a name="Doc"></a> Api Documentation
 
