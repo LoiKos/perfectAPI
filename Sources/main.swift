@@ -8,44 +8,31 @@ import Foundation
 import PerfectLogger
 import PerfectRequestLogger
 
-if let  db = ProcessInfo.processInfo.environment["DATABASE_DB"],
-  let username = ProcessInfo.processInfo.environment["DATABASE_USER"],
-  let host = ProcessInfo.processInfo.environment["DATABASE_HOST"],
-  let port =  ProcessInfo.processInfo.environment["DATABASE_PORT"],
-  let password = ProcessInfo.processInfo.environment["DATABASE_PASSWORD"] {
-      PostgresConnector.database = db
-      PostgresConnector.username = username
-      PostgresConnector.host = host
-      PostgresConnector.port = Int(port) ?? 32768
-      PostgresConnector.password = password
-} else {
-       throw APIError.databaseConnectionFailed
+
+guard let db = ProcessInfo.processInfo.environment["DATABASE_DB"],
+    let host = ProcessInfo.processInfo.environment["DATABASE_HOST"],
+    let port =  ProcessInfo.processInfo.environment["DATABASE_PORT"] else {
+        //throw APIError.databaseConnectionFailed
+        print("failed connection to database")
+        exit(0)
 }
 
-do {
+PostgresConnector.database = db
+PostgresConnector.host = host
+PostgresConnector.port = Int(port) ?? 32768
+PostgresConnector.username = ProcessInfo.processInfo.environment["DATABASE_USER"] ?? ""
+PostgresConnector.password = ProcessInfo.processInfo.environment["DATABASE_PASSWORD"] ?? ""
 
-    let connection = PGConnection()
+try checkDBConn()
 
-    let stringConnection = "host=\(PostgresConnector.host) port=\(PostgresConnector.port) dbname=\(PostgresConnector.database) user=\(PostgresConnector.username) password=\(PostgresConnector.password)"
+try Store().setup()
+try Product().setup()
+try Stock().setup()
 
-    if connection.connectdb(stringConnection) == .bad {
-        throw APIError.databaseConnectionFailed
-    }
 
-    defer {
-        connection.close()
-    }
 
-    try Store().setup()
-    try Product().setup()
-    try Stock().setup()
-} catch {
-    print(LogFile.error("impossible to connect to database : \(error)"))
-}
 
 let httplogger = RequestLogger()
-
-
 
 let server = HTTPServer()
 server.serverPort = 8080

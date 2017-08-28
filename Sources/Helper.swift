@@ -8,6 +8,21 @@
 
 import Foundation
 import PerfectHTTP
+import PostgresStORM
+import PostgreSQL
+
+func checkDBConn() throws {
+    var stringConnection = "host=\(PostgresConnector.host) port=\(PostgresConnector.port) dbname=\(PostgresConnector.database)"
+    
+    if PostgresConnector.username != "" { stringConnection += " user=\(PostgresConnector.username)" }
+    if PostgresConnector.password != "" { stringConnection += " password=\(PostgresConnector.password)"}
+    
+    let conn = PGConnection()
+    if conn.connectdb(stringConnection) == .bad {
+        throw APIError.databaseConnectionFailed
+    }
+    conn.close()
+}
 
 // This file is dedicated to valuable utility function for the API
 

@@ -41,9 +41,9 @@ class Store : PostgresStORM {
     
     func rows() -> [Store] {
         var rows = [Store]()
-        for i in 0 ..< self.results.rows.count {
+        for value in self.results.rows {
             let row = Store()
-            row.to(self.results.rows[i])
+            row.to(value)
             rows.append(row)
         }
         return rows
