@@ -308,17 +308,6 @@ $ docker run --name *containerName* -e POSTGRES_PASSWORD=*pwd* -e POSTGRES_USER=
 ```
 #### Build image : 
 
-   First go in the Docker file and update these lines :
-
-```Dockerfile
-ENV DATABASE_HOST=*host*  #provide your host name ( you can retrieve via docker inspect )
-ENV DATABASE_PORT=*port*  #provide your host port ( postgres work often with 5432 )
-ENV DATABASE_DB=*db name*
-ENV DATABASE_USER=*user name*
-ENV DATABASE_PASSWORD=*database password*
-```
-   Then lauch this command inside the project folder. If you want to set it  :
-
 ```shell 
 $ docker build -t *name* . 
 ```
@@ -328,6 +317,10 @@ $ docker build -t *name* .
 ```shell
 $ docker run -it --rm --link *databaseContainerName*:database -p 8080:8080 -v `pwd`:`pwd` -w `pwd` *perfectImageName*
 ```
+
+#### Vapor database configuration 
+
+You should update value in Config file postgresql.json to match your database information
 
 # <a name="Cov"></a> Code Coverage
 
@@ -340,7 +333,7 @@ $ docker run -it --rm --link *databaseContainerName*:database -p 8080:8080 -v `p
 - [x] Stock routes 
 - [x] Docker
 - [x] Linux compatibility 
-- [ ] API docs
+- [x] API docs
 - [ ] Unit tests 
 - [ ] CI 
 - [ ] Code Cov
