@@ -1,0 +1,8 @@
+module: perfectMbao
+author: LoiKos
+
+clean: true
+exclude: [Packages]
+min_acl: internal
+
+xcodebuild_arguments: [-project, perfectMbao.xcodeproj, -target, perfectMbao, LIBRARY_SEARCH_PATHS=.build/debug]

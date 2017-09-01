@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Store Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Store" class="dashAnchor"></a>
+    <a title="Store Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">perfectMbao Docs</a> (46% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">perfectMbao Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Store Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Product.html">Product</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProductAPI.html">ProductAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProductController.html">ProductController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reference.html">Reference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stock.html">Stock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StockAPI.html">StockAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StockController.html">StockController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Store.html">Store</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StoreAPI.html">StoreAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StoreController.html">StoreController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v11perfectMbao10httploggerC20PerfectRequestLogger13RequestLogger">httplogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v11perfectMbao6routesV11PerfectHTTP6Routes">routes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v11perfectMbao6serverC17PerfectHTTPServer10HTTPServer">server</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/APIError.html">APIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReferenceError.html">ReferenceError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao11checkDBConnFzT_T_">checkDBConn()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao11errorStatusFPs5Error_O11PerfectHTTP18HTTPResponseStatus">errorStatus(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao13parseToStringFzP_SS">parseToString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao10retrieveIdFzT7requestP11PerfectHTTP11HTTPRequest_6idnameSS_SS">retrieveId(request:idname:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao5toIntFzP_Si">toInt(_:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Store</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                </div>
+              </div>
+            <p>Store model defining a Store table in a postgres database
+this model conform to PostgresStORM.</p>
+
+<p>this model contains all requires functions to work as to() and rows().</p>
+
+<p>In addition you get 2 utilities functions :
+asDictionary() -&gt; that send you back a dictionnary based on your object
+toJSON() -&gt; that send you a json representation of your object that can be useful for RestAPI</p>
+
+<p>and also a custom init that allow you to create an instance of the object from a dictionary.</p>
+<div class="aside aside-author">
+    <p class="aside-title">Author</p>
+    Created by Loic LE PENN on 04/05/2017.
+
+</div>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    1.0
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11perfectMbao5Store8refstoreSS"></a>
+                    <a name="//apple_ref/swift/Property/refstore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11perfectMbao5Store8refstoreSS">refstore</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11perfectMbao5Store7pictureSS"></a>
+                    <a name="//apple_ref/swift/Property/picture" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11perfectMbao5Store7pictureSS">picture</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11perfectMbao5Store4nameSS"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11perfectMbao5Store4nameSS">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11perfectMbao5Store3vatSi"></a>
+                    <a name="//apple_ref/swift/Property/vat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11perfectMbao5Store3vatSi">vat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11perfectMbao5Store8currencySS"></a>
+                    <a name="//apple_ref/swift/Property/currency" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11perfectMbao5Store8currencySS">currency</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11perfectMbao5Store11merchantkeySS"></a>
+                    <a name="//apple_ref/swift/Property/merchantkey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11perfectMbao5Store11merchantkeySS">merchantkey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11perfectMbao5Store5tableFT_SS"></a>
+                    <a name="//apple_ref/swift/Method/table()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11perfectMbao5Store5tableFT_SS">table()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">table</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11perfectMbao5Store2toFC5StORM8StORMRowT_"></a>
+                    <a name="//apple_ref/swift/Method/to(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11perfectMbao5Store2toFC5StORM8StORMRowT_">to(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">to</span><span class="p">(</span><span class="n">_</span> <span class="nv">this</span><span class="p">:</span> <span class="kt">StORMRow</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11perfectMbao5Store4rowsFT_GSaS0__"></a>
+                    <a name="//apple_ref/swift/Method/rows()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11perfectMbao5Store4rowsFT_GSaS0__">rows()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11perfectMbao5Store12asDictionaryFT_GVs10DictionarySSP__"></a>
+                    <a name="//apple_ref/swift/Method/asDictionary()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11perfectMbao5Store12asDictionaryFT_GVs10DictionarySSP__">asDictionary()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11perfectMbao5Store6toJSONFzT_SS"></a>
+                    <a name="//apple_ref/swift/Method/toJSON()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11perfectMbao5Store6toJSONFzT_SS">toJSON()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11perfectMbao5StorecFzT4dictGVs10DictionarySSP___S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(dict:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11perfectMbao5StorecFzT4dictGVs10DictionarySSP___S0_">init(dict:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Store</span> <span class="p">:</span> <span class="kt">PostgresStORM</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">LoiKos</a>. All rights reserved. (Last updated: 2017-09-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

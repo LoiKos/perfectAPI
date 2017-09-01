@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>StockAPI Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/StockAPI" class="dashAnchor"></a>
+    <a title="StockAPI Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">perfectMbao Docs</a> (46% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">perfectMbao Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        StockAPI Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Product.html">Product</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProductAPI.html">ProductAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProductController.html">ProductController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reference.html">Reference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stock.html">Stock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StockAPI.html">StockAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StockController.html">StockController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Store.html">Store</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StoreAPI.html">StoreAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StoreController.html">StoreController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v11perfectMbao10httploggerC20PerfectRequestLogger13RequestLogger">httplogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v11perfectMbao6routesV11PerfectHTTP6Routes">routes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v11perfectMbao6serverC17PerfectHTTPServer10HTTPServer">server</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/APIError.html">APIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReferenceError.html">ReferenceError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao11checkDBConnFzT_T_">checkDBConn()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao11errorStatusFPs5Error_O11PerfectHTTP18HTTPResponseStatus">errorStatus(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao13parseToStringFzP_SS">parseToString(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao10retrieveIdFzT7requestP11PerfectHTTP11HTTPRequest_6idnameSS_SS">retrieveId(request:idname:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11perfectMbao5toIntFzP_Si">toInt(_:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>StockAPI</h1>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC11perfectMbao8StockAPI3newFzT7storeidSS4jsonGSqSS__SS"></a>
+                    <a name="//apple_ref/swift/Method/new(storeid:json:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC11perfectMbao8StockAPI3newFzT7storeidSS4jsonGSqSS__SS">new(storeid:json:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>this function create new product and associate it with the stock of a store.
+To work this function need two things :
+first a valid storeid
+second a json body that at least contains a name for the product and the following stock informations :  quantity, priceht and vat</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    APIError.notFound, APIError.missingRequireAttribut
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">new</span><span class="p">(</span><span class="nv">storeid</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">json</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>storeid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a string represent a valid storeid</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>json</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the json request body as a string</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC11perfectMbao8StockAPI3allFzT7storeidSS5limitSi6offsetSi_SS"></a>
+                    <a name="//apple_ref/swift/Method/all(storeid:limit:offset:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC11perfectMbao8StockAPI3allFzT7storeidSS5limitSi6offsetSi_SS">all(storeid:limit:offset:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function retrieve information about all store stock ( Product + stock). You can paginate your result.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    APIError.notFound
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">all</span><span class="p">(</span><span class="nv">storeid</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>storeid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a valid store id in String format</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>if you want to paginate you can use this parameter to limit the resultset size</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>if you want to paginate you can use this parameter to ignore some result</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC11perfectMbao8StockAPI4findFzT7storeidSS9productidSS_SS"></a>
+                    <a name="//apple_ref/swift/Method/find(storeid:productid:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC11perfectMbao8StockAPI4findFzT7storeidSS9productidSS_SS">find(storeid:productid:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function retrieve information about a store stock ( Product + stock)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">find</span><span class="p">(</span><span class="nv">storeid</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">productid</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>storeid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a valid store id in String format</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>productid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a valid product id in String format</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC11perfectMbao8StockAPI6deleteFzT7storeidSS9productidSS_SS"></a>
+                    <a name="//apple_ref/swift/Method/delete(storeid:productid:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC11perfectMbao8StockAPI6deleteFzT7storeidSS9productidSS_SS">delete(storeid:productid:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>this function provide an easy way to provide a delete on product and on stock at the same time.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    APIError.notFound
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">storeid</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">productid</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>storeid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a valid store id in String format</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>productid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a valid product id in String format</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC11perfectMbao8StockAPI6updateFzT7storeidSS9productidSS4jsonGSqSS__SS"></a>
+                    <a name="//apple_ref/swift/Method/update(storeid:productid:json:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC11perfectMbao8StockAPI6updateFzT7storeidSS9productidSS4jsonGSqSS__SS">update(storeid:productid:json:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function is use in the case where you need to perform an update on the stock and/or on the product.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    At the time i&rsquo;m writing this function PERFECT FRAMEWORK don&rsquo;t perform any relational request. It&rsquo;s a bit complicated to perform the needed action so there is a lot a custom behaviour.
+Need to be improve and updated as soon as perfect release a better way to handle relation with PostgresSQL
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="nv">storeid</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">productid</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">json</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>storeid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a valid store id in String format</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>productid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a valid product id in String format</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>json</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a json containing all the informations that should be updated</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC11perfectMbao8StockAPI5countFzT7storeidSS_Si"></a>
+                    <a name="//apple_ref/swift/Method/count(storeid:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC11perfectMbao8StockAPI5countFzT7storeidSS_Si">count(storeid:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>this function is useful in the case you search for the total of instance of a store in stock table with a given id</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    APIError.notFound
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">count</span><span class="p">(</span><span class="nv">storeid</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>storeid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the store id as String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">LoiKos</a>. All rights reserved. (Last updated: 2017-09-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

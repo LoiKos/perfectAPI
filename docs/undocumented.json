@@ -1,0 +1,390 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/APIError.swift",
+      "line": 19,
+      "symbol": "APIError.missingRequireAttribut",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/APIError.swift",
+      "line": 20,
+      "symbol": "APIError.parsingError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/APIError.swift",
+      "line": 21,
+      "symbol": "APIError.invalidBody",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/APIError.swift",
+      "line": 22,
+      "symbol": "APIError.invalidVat",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/APIError.swift",
+      "line": 23,
+      "symbol": "APIError.notFound",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/APIError.swift",
+      "line": 24,
+      "symbol": "APIError.unexpectedData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/APIError.swift",
+      "line": 25,
+      "symbol": "APIError.databaseConnectionFailed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/APIError.swift",
+      "line": 28,
+      "symbol": "APIError.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Helper.swift",
+      "line": 14,
+      "symbol": "checkDBConn()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Product.swift",
+      "line": 32,
+      "symbol": "Product.refproduct",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Product.swift",
+      "line": 33,
+      "symbol": "Product.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Product.swift",
+      "line": 34,
+      "symbol": "Product.picture",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Product.swift",
+      "line": 35,
+      "symbol": "Product.creationdate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Product.swift",
+      "line": 48,
+      "symbol": "Product.rows()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Product.swift",
+      "line": 58,
+      "symbol": "Product.asDictionary()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Product.swift",
+      "line": 67,
+      "symbol": "Product.toJSON()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Product.swift",
+      "line": 74,
+      "symbol": "Product.init(dict:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/ProductAPI.swift",
+      "line": 12,
+      "symbol": "ProductAPI",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/ProductController.swift",
+      "line": 14,
+      "symbol": "ProductController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Reference.swift",
+      "line": 16,
+      "symbol": "Reference.sharedInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Reference.swift",
+      "line": 93,
+      "symbol": "ReferenceError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Reference.swift",
+      "line": 94,
+      "symbol": "ReferenceError.wrongSize",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 24,
+      "symbol": "Stock.refstore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 25,
+      "symbol": "Stock.refproduct",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 26,
+      "symbol": "Stock.quantity",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 27,
+      "symbol": "Stock.creationdate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 28,
+      "symbol": "Stock.lastupdate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 29,
+      "symbol": "Stock.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 30,
+      "symbol": "Stock.priceht",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 31,
+      "symbol": "Stock.vat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 48,
+      "symbol": "Stock.rows()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 58,
+      "symbol": "Stock.asDictionary()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 71,
+      "symbol": "Stock.toJSON()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 75,
+      "symbol": "Stock.setup()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Stock.swift",
+      "line": 93,
+      "symbol": "Stock.init(dict:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/StockAPI.swift",
+      "line": 13,
+      "symbol": "StockAPI",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/StockController.swift",
+      "line": 17,
+      "symbol": "StockController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/StockController.swift",
+      "line": 18,
+      "symbol": "StockController.baseUri",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/StockController.swift",
+      "line": 20,
+      "symbol": "StockController.routes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 22,
+      "symbol": "Store.refstore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 23,
+      "symbol": "Store.picture",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 24,
+      "symbol": "Store.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 25,
+      "symbol": "Store.vat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 26,
+      "symbol": "Store.currency",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 27,
+      "symbol": "Store.merchantkey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 42,
+      "symbol": "Store.rows()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 52,
+      "symbol": "Store.asDictionary()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 71,
+      "symbol": "Store.toJSON()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/Store.swift",
+      "line": 82,
+      "symbol": "Store.init(dict:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/StoreAPI.swift",
+      "line": 13,
+      "symbol": "StoreAPI",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/StoreController.swift",
+      "line": 17,
+      "symbol": "StoreController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/StoreController.swift",
+      "line": 19,
+      "symbol": "StoreController.routes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/main.swift",
+      "line": 35,
+      "symbol": "httplogger",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/main.swift",
+      "line": 37,
+      "symbol": "server",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/loikos/Documents/Orange/workspace/perfectAPI/Sources/main.swift",
+      "line": 43,
+      "symbol": "routes",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/loikos/Documents/Orange/workspace/perfectAPI"
+}
